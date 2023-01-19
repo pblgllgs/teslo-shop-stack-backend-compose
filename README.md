@@ -8,7 +8,22 @@
 2. ```yarn install```
 3. Clonar el archivo ```.env.template``` y renombrarlo a ```.env```
 4. Cambiar las variables de entorno
-5. Levantar la base de datos
+
+|Variable de entorno|Ejemplo|Descripción|
+|---|---|---|
+| APP_VERSION |1.0.1| Version de la app|
+| STAGE |prod| Estado [dev, prod, staging, test] |
+| DB_USERNAME | username | nombre de usuario de la db |
+| DB_NAME |teslodb | nombre de la db |
+| DB_HOST |teslodb | dns name/ip del host  |
+| DB_PORT |5432 | puerto donde se conectará en el host |
+| DB_PASSWORD | password | contraseña |
+| EXTENSIONS_FILE_ACCEPTED | ['jpg','jpeg','png','gif'] | tipos de extenciones permitidas |
+| PORT | 3000 | puerto de acceso a la app |
+| HOST_API | <http://host:3000/api> | url de conección  |
+| JWT_SECRE | SeCrETo| Contraseña de encriptación de JWT|
+
+1. Levantar la base de datos
 
 ```$bash
 docker-compose up -d
