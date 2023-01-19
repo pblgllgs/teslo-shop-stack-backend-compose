@@ -22,10 +22,18 @@ docker-compose up -d
 http://localhost:3000/api/seed
 ```
 
-# Production notes
+## Production notes
 
 Ejecutar este comando
 
 ```$bash
 docker compose -f docker-compose.prod.yml build
+```
+
+## Construccion en multiples arquitecturas
+
+```$bash
+docker buildx build \                                            
+ --platform linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64 \
+ -t pblgllgs/teslo-shop-backend --push .
 ```
