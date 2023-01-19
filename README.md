@@ -52,3 +52,10 @@ docker buildx build \
  --platform linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64 \
  -t pblgllgs/teslo-shop-backend --push .
 ```
+## Construcción multiple arquitecturas y subidda a Digital Ocean
+```$bash
+docker buildx build \
+--platform linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/arm64 \
+-t registry.digitalocean.com/teslo-shop/teslo-shop-backend:digital-ocean --push .
+```
+
