@@ -7,13 +7,13 @@ services:
       context: .
       target: ${STAGE}
       dockerfile: Dockerfile
-    image: pblgllgs/teslo-shop-backend:1.0.0
+    image: pblgllgs/teslo-shop-backend:${APP_VERSION}
     container_name: nest-app
     ports:
       - ${PORT}:${PORT}
     environment:
       APP_VERSION: ${APP_VERSION}
-      STATE: ${STATE}
+      STAGE: ${STAGE}
       DB_USERNAME: ${DB_USERNAME}
       DB_NAME: ${DB_NAME}
       DB_HOST: ${DB_HOST}
